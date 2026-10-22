@@ -1,0 +1,14 @@
+start;end;structure
+001.623;011.601;Exposition:FirstGroup
+011.601;033.450;Exposition:Transition
+033.451;074.642;Exposition:SecondGroup
+074.643;082.580;Exposition:CadentialGroup
+082.580;092.777;Exposition:FirstGroup
+092.777;115.155;Exposition:Transition
+115.156;155.927;Exposition:SecondGroup
+155.928;164.441;Exposition:CadentialGroup
+164.441;246.429;Development
+246.429;256.250;Recapitulation:FirstGroup
+256.250;282.696;Recapitulation:Transition
+282.697;326.522;Recapitulation:SecondGroup
+326.523;345.957;Coda

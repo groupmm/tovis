@@ -1,0 +1,16 @@
+name: TOVIS_torch
+channels:
+  - conda-forge
+  - nodefaults
+
+dependencies:
+  - python=3.11
+  - numpy
+  - scipy
+  - matplotlib
+  - pandas
+  - librosa
+  - sphinx
+  - sphinx_rtd_theme
+  - jupyterlab
+  - pytorch

@@ -1,0 +1,59 @@
+[build-system]
+requires = ["setuptools>=77.0.3"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "tovis"
+version = "0.1.0"
+description = "TOVIS: A Python toolbox for tonal visualization of musical audio and annotation data"
+readme = "README.md"
+requires-python = ">=3.11"
+license = "MIT"
+license-files = ["LICENSE", "THIRD_PARTY_NOTICES.md", "licenses/*"]
+# Authors' affiliation: International Audio Laboratories, Erlangen.
+authors = [
+    { name = "Johannes Zeitler", email = "johannes.zeitler@audiolabs-erlangen.de" },
+    { name = "Meinard Müller", email = "meinard.mueller@audiolabs-erlangen.de" },
+]
+keywords = ["music", "audio", "chroma", "tonality", "visualization", "music information retrieval"]
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Intended Audience :: Science/Research",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3 :: Only",
+    "Programming Language :: Python :: 3.11",
+    "Topic :: Multimedia :: Sound/Audio :: Analysis",
+    "Topic :: Scientific/Engineering :: Visualization",
+]
+dependencies = [
+    "numpy",
+    "scipy",
+    "matplotlib",
+    "pandas",
+    "librosa>=0.10",
+]
+
+[project.optional-dependencies]
+# Neural inference with user-supplied model checkpoints.
+transcription = ["torch>=2.0"]
+docs = ["sphinx", "sphinx-rtd-theme"]
+notebooks = ["jupyterlab"]
+release = ["build>=1.2", "twine>=6"]
+
+[project.urls]
+Homepage = "https://github.com/groupmm/tovis"
+Documentation = "https://groupmm.github.io/tovis/"
+Repository = "https://github.com/groupmm/tovis"
+Issues = "https://github.com/groupmm/tovis/issues"
+
+[tool.setuptools]
+# Ship Python sources only; local checkpoints, caches, and generated artifacts
+# must not enter the release through automatic package-data discovery.
+include-package-data = false
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["tovis", "tovis.*"]
+exclude = ["tovis.*.__pycache__", "tovis.*.__pycache__.*"]
+# deep_chroma has no __init__.py and needs namespace-package discovery.
+namespaces = true
