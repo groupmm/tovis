@@ -2,7 +2,7 @@
   <img src="docs/source/_static/logo_tovis.png" alt="TOVIS logo" width="300">
 </p>
 
-# TOVIS: A Python toolbox for tonal visualization of musical audio and annotation data"
+# TOVIS: A Python toolbox for tonal visualization of musical audio and annotation data
 
 
 © [Johannes Zeitler](https://audiolabs-erlangen.de/fau/assistant/zeitler) and [Meinard Müller](https://www.audiolabs-erlangen.de/fau/professor/mueller), 2026
